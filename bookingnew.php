@@ -57,62 +57,14 @@
 	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.js"></script-->
 	<script type="text/javascript">
-//var jq = jQuery.noConflict(true);
+
 </script>
 
 <script type="text/javascript">
 
-$(document).ready(function(){
-  
- 
- 
+$(document).ready(function(){	
+	
 
-	//getval();
-	
-	//function childAge(a) {
-		
-//}
-	
-	
-/*	function getval()
-{
-	
-	
-	//alert("outside: "+ $('#selUser').val());
-	jQuery(document).on('change','.cls',function (e) {
-	// $('#selUser').on('change', function() {
-	
-	   var i=1;
-	    var loc=$(this).val();
-		    //  vaoc);
-	  if(loc != ''){
-	 
-		 $.ajax({
-				url: "<?php echo base_url();?>/Home/fetch_hotel",
-				method : 'POST',
-				data:{loc: loc},
-		
-	 success: function(data)
-        { 
-	//	alert(data);
-			//console.log(data);
-		              
-						for(var i=1;i<=50;i++){
-							
-					   $('#hotel_'+i+'').html(data);
-					  
-						}
-                   }
-					
-                });
-					}
-				  else{
-						
-					$('#hotel').html('<option value="">Select Hotel</option>');
-					}
-		     });
-			
-}*/
 var i=1;
 jQuery(document).on('change','.htype',function (e) {
 	e.preventDefault();
@@ -141,11 +93,7 @@ jQuery(document).on('change','.htype',function (e) {
         { 
 		
 		              
-					//	for(var i=1;i<=50;i++){
-							
-					   $("#hotel_"+id).html(data);
-					 
-					//	}
+					
                    }
 					
                 });
@@ -162,13 +110,13 @@ jQuery(document).on('change','.htype',function (e) {
 	      
 	  
 	    var hotel=$(this).val();
-   // alert(hotel);
+   
 		
 		var id = $(this).attr('id').substr(6);
-	//alert(id);
+	
 	    var dest=$("#selUser_"+id).val();
 		
-		//alert(dest);
+		
 		
 		    
 	 if(hotel != ''){
@@ -203,7 +151,7 @@ jQuery(document).on('change','.htype',function (e) {
 
 	   var i=1;
 	   var id=$(this).attr('id').substr(9);
-	  // alert(id);
+	  
 	    var checkout=$(this).val();
 
 		var checkin=$("#checkin_"+id).val();
@@ -213,13 +161,13 @@ jQuery(document).on('change','.htype',function (e) {
 		var extrachild=Number($('#extrachild').val());
 		var childwoutbed=Number($('#childwoutbed').val());
 		var hotel=$("#hotel_"+id).val();
-		//alert(hotel);
+		
 		var roomtype=$("#room_type_"+id).val();	
-		//alert(roomtype);
+		
 		var meal=$("#meal_plan_"+id).val();
 		var no_adults=Number($('#no_adults').val());
 		var no_child=Number($('#no_child').val());
-		//var rate_trans=Number($('#no_child').val());
+		
 		var add_require=$("#additional_require_"+id).val();
 	
 	
@@ -242,26 +190,7 @@ jQuery(document).on('change','.htype',function (e) {
 		
 	 success: function(data)
         { 
-		//alert(data);
-		//	console.log(data);
-		              
-			      //  var id=$(this).attr('id').substr(9);
-                     // alert(data.tot);
-					  //  alert(data.var2);
-						//alert(data.var3); 
-						//alert(data.var4);
-					//	alert(data.var5);
-					//	alert(data.var6);
-					   $('#rate_'+id).val(data.var1);
-					   $('#srate_'+id).val(data.var2);
-					   $('#drate_'+id).val(data.var3);
-				       $('#extraradult_'+id).val(data.var4);
-					   $('#extrarchild_'+id).val(data.var5);
-					   $('#childrwoutbed_'+id).val(data.var6);
-					 //  $('#srate_'+id).val(data.srate);
-						
-					  
-					//}
+				
 		}
 					
             });
@@ -269,42 +198,12 @@ jQuery(document).on('change','.htype',function (e) {
 		});	
 		
 		
-		/* $(".chk").change(function(){
-			// alert("sadsad");
-			var id=$(this).attr('id').substr(9);
-	   //alert(id);
-	    var checkout=$(this).val();
-
-		var checkin=$("#checkin_"+id).val();
-		var single=  Number($('#single').val());
-	//	alert(single);
-		var double= Number($('#double').val());
-		var extraadult=Number($('#extraadult').val());
-		var extrachild=Number($('#extrachild').val());
-		var childwoutbed=Number($('#childwoutbed').val());
-		var hotel=$("#hotel_"+id).val(); 
-		//alert(hotel);
-		 $.ajax({
-				url: "<?php echo base_url();?>/Home/hotel_rate_indi",
-				method : 'POST',
-				data:{checkout:checkout,checkin:checkin,single:single,double:double,extraadult:extraadult,extrachild:extrachild,childwoutbed:childwoutbed,hotel:hotel},	 
-		
-		  success: function(data)
-        { 
-		
-		              
-			     
-                  
-					   $('#srate'+id).val(data);
-		 
-		}
-		 });
-		  });*/
+	
 			
       $("#additional_require").change(function(){
      
 		  var id=$(this).val();
-		 // alert(id);
+		 
 				if ($(this).val() == '6') {
 		
 			    $('#others').css('display', 'block');
@@ -323,7 +222,7 @@ jQuery(document).on('change','.htype',function (e) {
 		$("#permit").change(function(){
        
 	   var id=$(this).val();
-	  // alert(id);
+	  
 			 if ($(this).val() == 'yes') {
 	 
 			 $('#amot').css('display', 'block');
@@ -346,7 +245,7 @@ jQuery(document).on('change','.htype',function (e) {
 		jQuery(document).on('change','#fleet',function (e) {
 	       
 	    var fleet=$('#fleet').val();
-		//alert(fleet);
+		
 	 
 		    
 	if(fleet != ''){
@@ -358,8 +257,7 @@ jQuery(document).on('change','.htype',function (e) {
 		
 	 success: function(data)
         { 
-		//alert(data);
-		//	console.log(data);
+		
 		              
 						//for(var i=1;i<=50;i++){
 							
@@ -378,14 +276,13 @@ jQuery(document).on('change','.htype',function (e) {
 
 		
 			  $(document).on('change','#vtype',function (e) {
-			   // e.preventDefault();
+			
 				var type = $(this).val();
-			    //alert(type);
+			  
 				var total=$('#total_km').val();
-				//alert(total);
+				
 				var no_days =$('#noofdays').val();
-		      // alert(type);
-			   //alert(total);
+		      
 			  var arrival=$('#arrival').val();
 			   var depart=$('#departure').val();
 				
@@ -397,14 +294,9 @@ jQuery(document).on('change','.htype',function (e) {
 		
 	 success: function(data)
         { 
-		//alert(data);
-		//	console.log(data);
+		
 		              
-						//for(var i=1;i<=50;i++){
-							
-					   $('#extra_km').val(data);
-					  
-						//}
+						
                    }
 					
                 });
@@ -415,7 +307,7 @@ jQuery(document).on('change','.htype',function (e) {
 			
 	  jQuery(document).on('change','#amot',function (e) {
 		 
-		 // alert("sadsassadsad");
+		
 			    var pamt=$(this).val();
 				
 				var extra_km =$('#extra_km').val(); 
@@ -425,8 +317,7 @@ jQuery(document).on('change','.htype',function (e) {
 				var type =$('#vtype').val();
 			   var arrival=$('#arrival').val();
 			   var depart=$('#departure').val();
-			  // alert(extra_km);
-			  // alert(total);
+			 
 		       
 				$.ajax({
 				url: "<?php echo base_url();?>/Home/transport_rate",
@@ -435,14 +326,7 @@ jQuery(document).on('change','.htype',function (e) {
 		
 	 success: function(data)
         { 
-	//	alert(data);
-		//	console.log(data);
-		              
-						//for(var i=1;i<=50;i++){
-							
-					   $('#t_rate').val(data);
-					  
-						//}
+	
                    }
 					
                 });
@@ -461,7 +345,7 @@ jQuery(document).on('change','.htype',function (e) {
 			$('.amount').each(function(){
 				sum +=Number($(this).val());
 				var t_rate=$('#t_rate').val();
-				//alert(t_rate);
+				
 			   sum1=+t_rate + +sum;
 
 			});
@@ -475,37 +359,25 @@ jQuery(document).on('change','.htype',function (e) {
 
 		$(document).on('change','#perc',function (e) {
 			
-					//alert("sfdsfd");	
+						
 				var per=$(this).val();
 				var pcost=$('#cost').val();
-				//alert(pcost);
+				
 				 var perce=(pcost*per)/100;
-				//alert(perce);
+				
 				$('#mamount').val(perce.toFixed(2));
 		 
 
 			}); 
 			
 		
-		/*$(document).on('click','#perc',function (e) {
-			//alert("sdsadsads");
-		   var per=$(this).val();
-		 //  alert(per);
-	
-		   var pcost=$('#cost').val();
-		   var gstt=(+pcost + +per);
-           var gst=(gstt*5)/100;
-		  // alert(gst);
-		   $('#pgst').val(gst);
-		 
-
-			});*/
+		
 			
 			
 				$('#perc').bind('blur',function() {
-				//$('#perc').click(function(){
+				
 				var per=$(this).val();
-				//alert(per);
+				
 				
 				if(per < 5){
 				
@@ -523,7 +395,7 @@ jQuery(document).on('change','.htype',function (e) {
 		 var markupamt=$(this).val();
 		 var pcost=$('#cost').val();
 		 var  total=+pcost + +markupamt;
-		 //alert(total);
+		
 			$('#subtotal').val(total.toFixed(2));
 		 
 		});
@@ -552,10 +424,7 @@ jQuery(document).on('change','.htype',function (e) {
 
     
     var val = $(this).val();
-    /*if ( val > 5 ) {
-        alert('opps no more than 5');
-        return;
-    }*/
+   
     $('#selectage').empty();
     var selectage;
     for (var i = 0, length = val; i < length; i++) {
@@ -566,29 +435,7 @@ jQuery(document).on('change','.htype',function (e) {
 
 });
 		
-	/*$("#childnum").change(function(){
-       
-		  var nochild=$(this).val();
-		  alert(nochild);
-		   for (var j = 1; j <=nochild; j++) {
-		//	$(a).closest(".countRoom").css("width", "100%").find('#selectAge').append('<div class="age"><label>Age of Child' + j + '</label><select name="childage" class="childage form-control"><option value="1" > Up to 1 years</option><option value="2" ' + (ageVals[j - 1] == 2 ? 'selected' : '') + '>1 to 2 years</option></select></div>');
-				 $('#selectAge').append('<div class="col-lg-6 col-md-12 col-sm-12"><label>Age of Child</label><select name="childage"><option value="1">Up to 1 years</option></select></div>');   
-			   }
-			/*	if ($(this).val() == 'Other') {
-		
-			    $('#others').css('display', 'block');
-			//$('#other').show();
-               }
-                else{
-					 $('#others').css('display', 'none');
-			 }
-			
-           
-            
-             
-          
-        });	*/
-		
+	
 	
 	
     
@@ -612,7 +459,7 @@ jQuery(document).on('change','.htype',function (e) {
      $(document).on('click', '.ti-minus', function(){  
            
 		  var button_id= $(this).attr('id').substr(7);
-            // alert(button_id); 
+           
 
            $('#day'+button_id+'').remove();  
 
@@ -621,7 +468,7 @@ jQuery(document).on('change','.htype',function (e) {
   
   
    $(document).on('click','#save',function(e) {
-	   // e.preventdefault();
+	 
 	var data = $("#frm_package").serialize();
 	
 	
@@ -631,8 +478,7 @@ jQuery(document).on('change','.htype',function (e) {
 		 url: "<?php echo base_url();?>/Home/package_booking",
 		
 		success: function(data){
-			//alert(data);	
-			//console.log(data);
+			
 			 alert("inserted successfully"); 
 					   
 			      $("#v-package-tab").removeClass("active");
@@ -650,7 +496,7 @@ jQuery(document).on('change','.htype',function (e) {
 	
 	
 	  $('#bt_payment').click(function(){
-		//alert("sasasads");
+		
 	var data = $("#payment").serialize();
 		
 		$.ajax({
@@ -659,12 +505,11 @@ jQuery(document).on('change','.htype',function (e) {
 			url: "<?php echo base_url();?>/Home/add_payment",
 			 
 			success: function(result){
-			//alert(result);
-			//console.log(result);
+			
 				alert("Payment added Successfully");			
 				
 					$("#agid").val(result);
-					//alert(result);
+					
 		}
 	});
  });
@@ -688,29 +533,6 @@ jQuery(document).on('change','.htype',function (e) {
             });
         });
  
-
-  /* $('.countRoom').find('.childnum').val($('.childcount').val());
-  $('.countRoom').find('.childnum').change()
-});*/
-
-
-/*function childAge1(a) {
-  alert(a);	  
-  var ageVals = $('input.age').val().split(',')
-  $('input.age').val(',')
-  $(a).each(function() {
-    age = $(a).val();
-	alert(age);
-    $(a).closest(".countRoom").find(".selectAge").empty();
-	
-    for (var j = 1; j <= age; j++) {
-     // $(a).closest(".countRoom").css("width", "100%").find(".selectAge").append('<div class="age"><label>Age of Child' + j + '</label><select name="childage" class="childage form-control"><option value="1" ' + (ageVals[j - 1] == 1 ? 'selected' : '') + '>Up to 1 years</option><option value="2" ' + (ageVals[j - 1] == 2 ? 'selected' : '') + '>1 to 2 years</option></select></div>');
-     $(a).closest(".countRoom").css("width", "100%").find(".selectAge").append('<div class="col-lg-6 col-md-12 col-sm-12"><label>Age of Child</label><select name="childage"><option value="1">Up to 1 years</option></select></div>');
-	}
-  });
-  
-	
-}*/
 
 $(document).on('change','.cls',function (e) {
 	     var itin=$(this).val();
@@ -753,7 +575,7 @@ $(document).on('change','.cls',function (e) {
 				 $('#itenerary_1').val(name);		
 				$('#MyPopup').modal('hide'); 
                			
-				//location.reload();   
+				   
    
 			}
 		});
@@ -791,10 +613,10 @@ $(document).on('change','.cls',function (e) {
 <script>
  function toggle(names) {
       var t=names.value;
-	  //alert(t);
+	  
         var tamt = document.getElementById('tmt');
 	    var aamt = document.getElementById('amt');
-		//alert(tamt);
+		
 		if(t=='total'){
 			tamt.style.display = 'block';
 			
@@ -816,7 +638,7 @@ $(document).on('change','.cls',function (e) {
 
 	function GetDays(){
                 var arrival = new Date(document.getElementById("arrival").value);
-				//alert(arrival)
+				
                 var departure = new Date(document.getElementById("departure").value);
                 var days1=(departure - arrival) / (24 * 3600 * 1000);
 				var days=days1+1;
@@ -824,7 +646,7 @@ $(document).on('change','.cls',function (e) {
         }
 		function GetNights(){
                 var arrival = new Date(document.getElementById("arrival").value);
-				//alert(arrival)
+				
                 var departure = new Date(document.getElementById("departure").value);
                   var days =(departure - arrival) / 86400000 ;
 				   var nights=days;
@@ -850,7 +672,7 @@ $(document).on('change','.cls',function (e) {
 				data:{id:id},
 		 success: function(data)
         { 
-		 // alert(data);
+		
 		  $('#i_name').html(data);
 		 
 		}		
@@ -876,7 +698,7 @@ $(document).on('change','.cls',function (e) {
 
 	<body>
 
-		<!-- Wrapper -->
+		
 
 		<div class="wrapper">
 			<div class="inner-wrapper">
