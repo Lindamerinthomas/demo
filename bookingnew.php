@@ -48,17 +48,12 @@
 
 	</head>
 	     <script src="<?php echo base_url();?>/assets/js/jquery-2.2.3.min.js"></script>
-		 <script src="<?php echo base_url();?>/assets/js/jquery.min.js"></script>
-		<!--link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script-->
+	     <script src="<?php echo base_url();?>/assets/js/jquery.min.js"></script>
+		
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.js"></script-->
+	     <script type="text/javascript">
 
-
-	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script-->
-	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.js"></script-->
-	<script type="text/javascript">
-
-</script>
+            </script>
 
 <script type="text/javascript">
 
