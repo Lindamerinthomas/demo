@@ -346,8 +346,6 @@ $data['metdetails']=$this->Activitymodel->getonerowd($id);
      redirect('Activity/meetingdetails/'.$id);
         }
 
-
-
  //adviory committees
   
  public function advisorycommittees()
@@ -433,8 +431,6 @@ $data['advcdetails']=$this->Activitymodel->getonerowc($id);
      $this->db->update('act_committees',$data);
      redirect('Activity/advcdetails/'.$id);
         }
-
-
 
 
         //tenth class
