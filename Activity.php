@@ -93,9 +93,6 @@ public  function updateind($id)
         }
 
 
-
-//spc mini projects
-
      public function spcminiprojects()
     {
         $this->load->view('spcminiprojects');
