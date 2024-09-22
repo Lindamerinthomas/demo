@@ -685,7 +685,7 @@ $data['ofldetails']=$this->Activitymodel->getonerowg($id);
 
 
 
-//Drishya Padam
+
  public function drishyapadam()
     {
         $this->load->view('drishyapadam');
