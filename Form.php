@@ -10,7 +10,6 @@ class Form extends CI_Controller
     }
 	
 	
-	
    public function index()
     {
          if($this->session->userdata('username'))
@@ -33,8 +32,6 @@ class Form extends CI_Controller
     {
         $this->load->view('login1');
     }
-
-
 
 
 
@@ -75,10 +72,6 @@ $data['sliderdetails']=$this->Biodatamodel->getonerow($sl_id);
      $this->load->view('editslider',$data);
     }
     
-
-
-
-
 
 
 public function sliderdelete($id){
