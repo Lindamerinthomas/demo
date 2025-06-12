@@ -261,7 +261,7 @@ $data['fvdetails']=$this->Activitymodel->getonerowb($id);
         }
 
 
-//meeting
+
 
        public function meeting()
     {
