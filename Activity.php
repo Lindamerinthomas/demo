@@ -177,7 +177,7 @@ public  function updatespcmini($id)
      redirect('Activity/spcminidetails/'.$id);
         }
 
-    //field visit
+    
          public function fieldvisit()
     {
         $this->load->view('fieldvisit');
