@@ -8,8 +8,7 @@ class Activity extends CI_Controller
      $this->load->model("Activitymodel","m");     
             
     }
-
-
+    
   //indoor projects  
         
 public function indoorprojects()
@@ -343,6 +342,7 @@ $data['metdetails']=$this->Activitymodel->getonerowd($id);
      redirect('Activity/meetingdetails/'.$id);
         }
 
+    
  //adviory committees
   
  public function advisorycommittees()
@@ -770,3 +770,4 @@ $data['dpdetails']=$this->Activitymodel->getonerowh($id);
      redirect('Activity/drishyamdetails/'.$id);
         }
 }
+
